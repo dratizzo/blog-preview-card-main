@@ -20,6 +20,11 @@
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
 :root {
     --color-primary-yellow: hsl(47, 88%, 63%);
     --color-secundary-white: hsl(0, 0%, 100%);
@@ -27,39 +32,32 @@
     --color-gray: hsl(0, 0%, 42%);
 
     --font-family-base: 'Figtree-VariableFont', "Figtree", sans-serif;
+    --font-wgt-500: 500;
+    --font-wgt-800: 800;
 }
 
 html {
-    font-size: 100%;
+    font-size: 16px;
 }
 
 body {
-    display: flex;
     height: 100vh;
-    justify-content: center;
     position: relative;
-}
-
-h1, h2, h3, h4, h5 {
-    font-size: inherit;
-    font-weight: inherit;
-}
-
-.solid-background-color {
     display: flex;
     background-color: var(--color-primary-yellow);
+    justify-content: center;
     align-items: center;
 }
 
 .card {
-    max-width: 55vh;
+    width: min(85%, 396px);
     background-color: var(--color-secundary-white);
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
+    border-radius: 1.4rem;
     box-shadow: var(--color-black) 0.4rem 0.4rem;
-    border: 1px solid var(--color-black);
-    padding: 17.5px;
+    border: 2px solid var(--color-black);
+    padding: 1.5rem;
 }
 
 img {
@@ -70,28 +68,30 @@ img {
     font-size: 1.65rem;
     font-family: var(--font-family-base);
     color: var(--color-black);
-    font-weight: 800;
-    margin-top: 1rem;
+    font-weight: var(--font-wgt-800);
+    margin: 1.2rem 0px;
 }
 
 .tag {
     display: inline-block;
     font-family: var(--font-family-base);
     color: var(--color-black);
-    font-weight: 800;
+    font-weight: var(--font-wgt-800);
     background-color: var(--color-primary-yellow);
-    padding: 0.2rem 0.5rem;
+    padding: 0.4rem 1rem;
     border-radius: 3px;
-    margin: 1.2rem 0px 0.6rem 0px;
+    margin: 1.6rem 0px 1rem 0px;
 }
 
 time {
     font-family: var(--font-family-base);
+    font-weight: var(--font-wgt-500);
     color: var(--color-black);
 }
 
 p {
     font-family: var(--font-family-base);
+    font-weight: var(--font-wgt-500);
     font-size: 1rem;
     color: var(--color-gray);
 }
@@ -99,20 +99,21 @@ p {
 .article-autor-info {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
 }
 
 .autor-info-text {
     font-family: var(--font-family-base);
     color: var(--color-black);
-    font-weight: 800;
-}
-
-.attribution {
-    position: absolute;
-    bottom: 20px;
+    font-weight: var(--font-wgt-800);
 }
 
 .card-paragraph {
-    margin: 1rem 0px;
+    margin-bottom: 1.2rem;
+}
+
+.attribution {
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 1rem;
 }
